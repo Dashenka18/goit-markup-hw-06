@@ -859,9 +859,17 @@ flex-wrap: wrap;
   }
 
   .svg-btn{
-    
+    fill: var(--brand-color);
     width: 8px;
     height: 8px;
+  }
+
+  .close-btn:hover, .close-btn:focus{
+    background-color: var(--hover-color);
+  }
+
+  .svg-btn:hover, .svg-btn:focus{
+    fill: var(--background);
   }
 
   /* form */
@@ -994,6 +1002,7 @@ color: var(--grey-color);
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 17px;
 
     padding: 16px 32px;
     width: 169px;
@@ -1065,19 +1074,49 @@ color: var(--grey-color);
 
   /* checkbox */
 
+  .accept{
+    padding: 0;
+    padding-top: 16px;
+  }
+
+  .checkbox{
+    appearance: none;
+    position: absolute;
+  }
+
+  .text-acp{
+    gap: 8px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: var(--grey-color);
+    
+    align-items: center;
+  }
+
    .text-acp::before{
     content: '';
     display: block;
 
     width: 16px;
     height: 16px;
-    border: 2px solid red;
+    border: 1px solid var(--brand-color);
     border-radius: 4px;
     cursor: pointer;
+    
    }
 
-   .chekbox:checked + .text-acp::before{
+   .checkbox:checked + .text-acp::before{
     background-color: var(--accent-color);
+
+    background-image: url("../images/Vector\ \(6\)\ \(1\).svg");
+   
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+
+   
    }
 
    .pp{
@@ -1090,76 +1129,78 @@ color: var(--grey-color);
 
    /* basement form */
 
-   .bs-form{
-    padding-left: 80px;
-   
+   .basement-form{
+    margin-left: 80px;
+    display: block;
    }
 
-   .bs-form-title{
-    margin: 0;
-    padding-bottom: 16px;
-    font-style: normal;
+   .bs-form{
+    
+    margin-top: 0em;
+    
+   }
+
+   .sb{
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    margin-bottom: 16px;
     color: var(--background);
+   }
+
+   .form-b{
+    display: flex;
    }
 
    .bs-f{
-    border: 1px solid var(--background);
+    font-family: "Roboto";
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    color: var(--background);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
-    background-color: var(--brand-color);
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 16px;
-    
-    width: 264px;
+    padding: 0 16px 0 16px;
     height: 40px;
-   }
-
-   .bs-f::placeholder{
-    color: var(--background);
-    font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 2;
-letter-spacing: 0.04em;
-   }
-
-  .btn-form-bs{
-    display: block;
-    
-   
-
-    background-color: var(--accent-color);
-    color: var(--background);
-
-    border: 1px solid var(--accent-color);
+    width: 264px;
+    background-color: transparent;
+    outline: 0;
+    transition: border-color var(--timing-cubic);
+}
+   .btn-form-bs{
+    display: flex;
+    padding: 8px 24px;
     border-radius: 4px;
-   
-    padding-top: 8px;
-    padding-bottom: 8px;
-   
-    
-  }
+    border: 0;
+    cursor: pointer;
+    margin-left: 24px;
+    background: var(--accent-color);
+    transition: background-color var(--timing-cubic);
+   }
 
-  .btn-form-bs:hover, .btn-form-bs:focus{
+   .btn-form-bs:hover, .btn-form-bs:focus{
     background-color: var(--hover-color);
-  }
+   }
 
-  .btn-svg-bs{
-    position: absolute;
+   .submit{
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: var(--background);
+    margin-right: 16px;
+    padding: 0;
+    border: none;
+   }
 
-    width: 12px;
-    height: 12px;
-    top: 8px;
-    left: 117px;
-
+   .btn-svg-bs{
+    height: 24px;
+    width: 24px;
     fill: var(--background);
-  }
-
-  .btn-svg{
-    position: relative;
-  }
+   }
+  
   
