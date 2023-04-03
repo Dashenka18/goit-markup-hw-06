@@ -873,6 +873,14 @@ flex-wrap: wrap;
   }
 
   /* form */
+
+  .window{
+    padding-top: 72px;
+    padding-left: 24px;
+    padding-right: 24px;
+    
+  }
+
   .form{
     width: 360px;
     margin-left: auto;
@@ -880,8 +888,8 @@ flex-wrap: wrap;
   }
 
   .title-form{
-    padding-top: 72px;
-
+    padding: 0;
+    margin-bottom: 17px;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -1076,7 +1084,7 @@ color: var(--grey-color);
 
   .accept{
     padding: 0;
-    padding-top: 16px;
+    margin-top: 16px;
   }
 
   .checkbox{
@@ -1145,8 +1153,9 @@ color: var(--grey-color);
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    margin-bottom: 16px;
+    padding-bottom: 16px;
     color: var(--background);
+    margin: 0;
    }
 
    .form-b{
